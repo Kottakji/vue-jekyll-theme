@@ -3,9 +3,9 @@
         <div class="tag-list">
             <div class="meta" v-if="tags">Tags</div>
 
-            <v-link class="button" v-for="(tag, key) in tagsWithHref" v-bind:href="tag.href" :key="key">
-                <p><i class="fa fa-tag fa-fw"></i> {{ tag.title }}</p>
-            </v-link>
+            <p class="button tag" v-for="(tag, key) in tagsWithHref" v-bind:href="tag.href" :key="key">
+                <i class="fa fa-tag fa-fw"></i> {{ tag.title }}
+            </p>
         </div>
     </footer>
 </template>

@@ -14,22 +14,23 @@ Look at the other pages to see how to build them and what data to parse.
 
 Install the node modules if you haven't
 
-> npm install
+    npm install
 
 To make sure the latest js file is compiled via js
 
-> npm run build
+    npm run build
 
 To serve locally
 
-> Jekyll serve
+    Jekyll serve
 
-If you want to edit any vue template, best to test them with (it uses the index.html then)
+If you want to edit any vue template, best to test them with
 
-> npm run dev
+    cp ./_site/index.html index.html 
+    npm run dev
 
-Note: `jekyll serve` generates it's own index.html into `/_site/index.html`, and uses `/pages/home.md` and doesn't use `index.html`. 
-`index.html` is used for testing VueJS locally.
+Note: `jekyll serve` generates it's own index.html into `/_site/index.html`, and uses `/pages/home.md`. 
+You can then this index.html to test quickly with `npm run dev` if you want to make changes to the vue files.
 
 ### Editing this theme
 

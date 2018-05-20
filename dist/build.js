@@ -11316,6 +11316,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 
 
@@ -11324,6 +11325,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     components: {
         VLink: __WEBPACK_IMPORTED_MODULE_0__components_VLink_vue___default.a
     }
+
 });
 
 /***/ }),
@@ -11608,8 +11610,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
     data() {
         return {
-            avatar: '/assets/img/logo.png', // TODO
-            title: 'Frappant Chinees', // TODO
+            avatar: '/assets/img/logo.png',
+            title: 'Frappant Chinees',
             links: [{ title: 'Over mij', href: '/about' }, { title: 'Het boek', href: '/book' }, { title: 'Leren met muziek videos', href: '/movie-videos' }, { title: 'Winkel', href: '/shop' }]
         };
     }
@@ -13571,15 +13573,15 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [(_vm.tags) ? _c('div', {
     staticClass: "meta"
   }, [_vm._v("Tags")]) : _vm._e(), _vm._v(" "), _vm._l((_vm.tagsWithHref), function(tag, key) {
-    return _c('v-link', {
+    return _c('p', {
       key: key,
-      staticClass: "button",
+      staticClass: "button tag",
       attrs: {
         "href": tag.href
       }
-    }, [_c('p', [_c('i', {
+    }, [_c('i', {
       staticClass: "fa fa-tag fa-fw"
-    }), _vm._v(" " + _vm._s(tag.title))])])
+    }), _vm._v(" " + _vm._s(tag.title) + "\n        ")])
   })], 2)])
 },staticRenderFns: []}
 

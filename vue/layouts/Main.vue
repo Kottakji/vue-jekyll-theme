@@ -18,8 +18,8 @@
         },
         data() {
             return {
-                avatar: '/assets/img/logo.png', // TODO
-                title: 'Frappant Chinees', // TODO
+                avatar: '/assets/img/logo.png',
+                title: 'Frappant Chinees',
                 links: [
                     {title: 'Over mij', href: '/about'},
                     {title: 'Het boek', href: '/book'},

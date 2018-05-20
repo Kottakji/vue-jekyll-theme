@@ -24,6 +24,7 @@
                 <li v-for="link in links">
                     <v-link v-bind:href="link.href">{{link.title}}</v-link>
                 </li>
+
             </ul>
         </nav>
     </header>
@@ -42,6 +43,7 @@
         components: {
             VLink
         },
+
     }
 </script>
 
