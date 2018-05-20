@@ -8,12 +8,12 @@
             <h2 class="subtitle" v-if="subtitle">{{ subtitle }}</h2>
 
         </header>
+
         <section class="post-content">
             <slot></slot>
         </section>
 
-        <!-- Tag list for portfolio -->
-        <TagList></TagList>
+        <TagList v-bind:tags="tags"></TagList>
 
     </article>
 </template>
@@ -23,18 +23,17 @@
     import TagList from '../components/TagList.vue'
 
     export default {
+        props: [
+            'title',
+            'subtitle',
+            'imageClass',
+            'image',
+            'tags'
+        ],
         components: {
             VLink,
             TagList
         },
-        data() {
-            return {
-                title: 'Over mij', // TODO
-                subtitle: '',
-                imageClass:'feature-image',
-                image: '/assets/img/background/taiwan_101.jpg',
-            }
-        }
     }
 </script>
 

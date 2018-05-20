@@ -18,17 +18,15 @@
     import TagList from './TagList.vue'
 
     export default {
+        props: [
+            'title',
+            'date',
+            'image',
+            'imageClass'
+        ],
         components: {
             VLink,
             TagList
-        },
-        data() {
-            return {
-                title: 'title',
-                date: 'date', // TODO change all
-                image: '/assets/img/background/video_page.jpg',
-                imageClass: 'feature-image',
-            }
         },
     }
 </script>

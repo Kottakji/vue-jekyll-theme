@@ -5,9 +5,7 @@
             <h2 class="subtitle" v-if="subtitle">{{ subtitle }}</h2>
         </header>
 
-        <section class="post-content" v-if="description">
-            {{ description }}
-        </section>
+        <slot></slot>
 
         <section>
             <div class="bootstrap-iso">
@@ -42,29 +40,17 @@
 
 <script>
     import VLink from './VLink.vue'
-
     export default {
+        props: [
+            'title',
+            'subtitle',
+            'image',
+            'imageClass',
+            'videos',
+        ],
         components: {
             VLink
         },
-        data() {
-            return {
-                title: 'title',
-                subtitle: 'subtitle', // TODO change this all
-                description: '',
-                image: '/assets/img/background/taiwan_101.jpg',
-                imageClass: 'feature-image',
-                videos: [
-                    {title: 'JJ Lin', href: '/videos/001', img: 'assets/img/artists/jj_lin_0.jpg'}
-                ]
-            }
-        },
+
     }
 </script>
-
-<!--&lt;!&ndash; Bootstrap-3.3.7 isolation CSS TODO move this &ndash;&gt;-->
-<!--<link rel="stylesheet" type="text/css" href="/assets/css/vendor/bootstrap-iso.min.css">-->
-
-<!--&lt;!&ndash; Bootstrap JS TODO move this &ndash;&gt;-->
-<!--<script src="/assets/js/vendor/bootstrap.min.js"></script>-->
-

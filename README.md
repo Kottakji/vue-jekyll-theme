@@ -1,51 +1,39 @@
-# vue-jekyll-theme
-
-Welcome to your new Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes`, your sass files in `_sass` and any other assets in `assets`.
-
-To experiment with this code, add some sample content and run `bundle exec jekyll serve` – this directory is setup just like a Jekyll site!
+# Jekyll VueJS theme
 
 
+Free hosting with github pages, and VueJS for the nice single page feeling. Based on based on Type-on-strap theme.
 
-## Installation
+### How it works
 
-Add this line to your Jekyll site's `Gemfile`:
+Create vue pages in `/vue/pages`. There are 3 types of pre-made components `<PageWithVideos>`, `<PageWithTags>` and `<PageWithRecentVideos>`. 
+Look at the other pages to see how to build them and what data to parse. 
 
-```ruby
-gem "vue-jekyll-theme"
-```
+### Installation
 
-And add this line to your Jekyll site's `_config.yml`:
+##### Required: `npm`, `jekyll`
 
-```yaml
-theme: vue-jekyll-theme
-```
+Install the node modules if you haven't
 
-And then execute:
+> npm install
 
-    $ bundle
+To make sure the latest js file is compiled via js
 
-Or install it yourself as:
+> npm run build
 
-    $ gem install vue-jekyll-theme
+To serve locally
 
-## Usage
+> Jekyll serve
 
+If you want to edit any vue template, best to test them with (it uses the index.html then)
 
+> npm run dev
 
-## Contributing
+Note: `jekyll serve` generates it's own index.html into `/_site/index.html`, and uses `/pages/home.md` and doesn't use `index.html`. 
+`index.html` is used for testing VueJS locally.
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/hello. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+### Editing this theme
 
-## Development
-
-To set up your environment to develop this theme, run `bundle install`.
-
-Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
-
-When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
-To add a custom directory to your theme-gem, please edit the regexp in `vue-jekyll-theme.gemspec` accordingly.
-
-## License
-
-The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+1. Update the routes.js for new page routes
+1. Add the page in pages (look at the existing ones to see how)
+1. 
 

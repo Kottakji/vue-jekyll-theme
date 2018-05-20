@@ -23,18 +23,14 @@
     import VLink from '../components/VLink.vue'
 
     export default {
+        props: [
+            'headerText',
+            'videosText',
+            'videos',
+        ],
         components: {
             VLink
         },
-        data() {
-            return {
-                headerText: 'Chinees leren met Frappant Chinees <br>met het boek <br> of met muziek videos', // TODO
-                videosText: 'Meest recente videos',
-                videos: [
-                    {title: 'Title of video', href: '/video'} // TODO
-                ]
-            }
-        }
     }
 </script>
 

@@ -3,7 +3,7 @@
         <div class="tag-list">
             <div class="meta" v-if="tags">Tags</div>
 
-            <v-link class="button" v-for="tag in tagsWithHref" v-bind:href="tag.href">
+            <v-link class="button" v-for="(tag, key) in tagsWithHref" v-bind:href="tag.href" :key="key">
                 <p><i class="fa fa-tag fa-fw"></i> {{ tag.title }}</p>
             </v-link>
         </div>
@@ -14,15 +14,9 @@
     import VLink from './VLink.vue'
 
     export default {
+        props: ['tags'],
         components: {
             VLink
-        },
-        data() {
-            return {
-                tags: [
-                    'about' // TODO
-                ]
-            }
         },
         computed: {
             tagsWithHref: function () {

@@ -5,7 +5,6 @@ const app = new Vue({
     el: '#app',
     data: {
         currentRoute: window.location.pathname,
-        text: 'Hello vue',
     },
     computed: {
         ViewComponent() {
