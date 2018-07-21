@@ -13,11 +13,12 @@
     "markdown-loader": "^2.0.2",
     "marked": "^0.3.19",
     "showdown": "^1.8.6",
-    "vue": "^2.3.3"
+    "vue": "^2.3.3",
+    "mime": "^1.4.1"
   },
   "devDependencies": {
     "babel-core": "^6.0.0",
-    "babel-loader": "^7.0.0",
+    "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.6.1",
     "cross-env": "^4.0.0",
     "css-loader": "^0.28.11",
